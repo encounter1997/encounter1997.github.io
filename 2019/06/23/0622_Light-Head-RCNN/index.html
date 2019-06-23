@@ -25,21 +25,19 @@
 <meta property="og:site_name" content="encounter1997">
 <meta property="og:description" content="概述​        本文指出目标检测中二阶段方法（例如Faster RCNN与R-FCN）速度慢的主要原因在于其头部（用于对proposal进行分类的部分）网络的运算量较大。为此，本文提出了两点改进：  减少用于分类的特征的通道数 降低头部网络的复杂度（仅使用一个全连接层）  ​        最终，本文的方法能够在大幅提高速度的同时，在一定程度上提高目标检测的精度。提高速度自然不必多说，为什么">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://encounter1997.github.io/tree/master/2019/06/23/0622_Light-Head-RCNN/1561215773857.png">
-<meta property="og:image" content="http://yoursite.com/tree/master/2019/06/23/0622_Light-Head-RCNN/1561215773857.png">
 <meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/1561215773857.png">
-<meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561216406083.png">
-<meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561215358256.png">
-<meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561259299772.png">
-<meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561259314844.png">
-<meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561258603579.png">
-<meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561258710591.png">
-<meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561259414694.png">
-<meta property="og:updated_time" content="2019-06-23T08:19:49.319Z">
+<meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/1561216406083.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/1561215358256.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/1561259299772.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/1561259314844.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/1561258603579.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/1561258710591.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/1561259414694.png">
+<meta property="og:updated_time" content="2019-06-23T08:23:26.269Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Light-Head R-CNN">
 <meta name="twitter:description" content="概述​        本文指出目标检测中二阶段方法（例如Faster RCNN与R-FCN）速度慢的主要原因在于其头部（用于对proposal进行分类的部分）网络的运算量较大。为此，本文提出了两点改进：  减少用于分类的特征的通道数 降低头部网络的复杂度（仅使用一个全连接层）  ​        最终，本文的方法能够在大幅提高速度的同时，在一定程度上提高目标检测的精度。提高速度自然不必多说，为什么">
-<meta name="twitter:image" content="http://encounter1997.github.io/tree/master/2019/06/23/0622_Light-Head-RCNN/1561215773857.png">
+<meta name="twitter:image" content="http://yoursite.com/2019/06/23/0622_Light-Head-RCNN/1561215773857.png">
   
     <link rel="alternate" href="/atom.xml" title="encounter1997" type="application/atom+xml">
   
@@ -190,42 +188,40 @@
 <li>降低头部网络的复杂度（仅使用一个全连接层）</li>
 </ol>
 <p>​        最终，本文的方法能够在大幅提高速度的同时，在一定程度上提高目标检测的精度。提高速度自然不必多说，为什么能够提高精度将在后文说明。</p>
-<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="Light-Head-RCNN总体结构"><a href="#Light-Head-RCNN总体结构" class="headerlink" title="Light Head RCNN总体结构"></a>Light Head RCNN总体结构</h3><p><img src="//encounter1997.github.io/tree/master/2019/06/23/0622_Light-Head-RCNN/1561215773857.png" alt="1561215773857"></p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="Light-Head-RCNN总体结构"><a href="#Light-Head-RCNN总体结构" class="headerlink" title="Light Head RCNN总体结构"></a>Light Head RCNN总体结构</h3><p><img src="/2019/06/23/0622_Light-Head-RCNN/1561215773857.png" alt="1561215773857"></p>
 <p>​        从Light Head RCNN与Faster RCNN的对比中可以看出，本文放弃了Global Average Pooling，从而保留了原图的空间信息，而Faster RCNN中特征的空间信息在GAP中丢失。因此，本文中的方法能够在一定程度上提高目标检测的精度。</p>
-<p><img src="/tree/master/2019/06/23/0622_Light-Head-RCNN/1561215773857.png" alt="1561215773857"></p>
-<h3 id="特征使用更少的通道"><a href="#特征使用更少的通道" class="headerlink" title="特征使用更少的通道"></a>特征使用更少的通道</h3><p><img src="/2019/06/23/0622_Light-Head-RCNN/1561215773857.png" alt="1561215773857"></p>
-<p><img src="//yoursite.com/2019/06/23/0622_Light-Head-RCNN/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561216406083.png" alt="1561216406083"></p>
+<h3 id="特征使用更少的通道"><a href="#特征使用更少的通道" class="headerlink" title="特征使用更少的通道"></a>特征使用更少的通道</h3><p><img src="/2019/06/23/0622_Light-Head-RCNN/1561216406083.png" alt="1561216406083"></p>
 <p>​        同时，为了减少特征的通道数，本文采用了卷积核较大的可分离卷积，将2048个通道减少到490个。可用C<sub>mid</sub>和C<sub>out</sub>来决定运算量和精度之间的trade off。使用大的卷积核提升了感受野的大小，进一步提升了该方法的总体性能。同时采用可分离卷积，大大减小了参数量与运算量。</p>
 <h3 id="值得一提"><a href="#值得一提" class="headerlink" title="值得一提"></a>值得一提</h3><p>​        由于头部运算量的减小，本文在区域提议中使用了3个ratio和5个scale，即{32，64，128，256，512}。这也直接提升了目标检测的精度。</p>
 <h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><h3 id="与其它方法的比较"><a href="#与其它方法的比较" class="headerlink" title="与其它方法的比较"></a>与其它方法的比较</h3><ol>
 <li>总体比较</li>
 </ol>
-<p><img src="//yoursite.com/2019/06/23/0622_Light-Head-RCNN/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561215358256.png" alt="1561215358256"></p>
+<p><img src="/2019/06/23/0622_Light-Head-RCNN/1561215358256.png" alt="1561215358256"></p>
 <ol start="2">
 <li>使用L模型（resnet-101作为backbone）比较精度</li>
 </ol>
-<p><img src="//yoursite.com/2019/06/23/0622_Light-Head-RCNN/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561259299772.png" alt="1561259299772"></p>
+<p><img src="/2019/06/23/0622_Light-Head-RCNN/1561259299772.png" alt="1561259299772"></p>
 <ol start="2">
 <li>使用S模型（Xception like模型作为backbone）比较速度</li>
 </ol>
-<p><img src="//yoursite.com/2019/06/23/0622_Light-Head-RCNN/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561259314844.png" alt="1561259314844"></p>
+<p><img src="/2019/06/23/0622_Light-Head-RCNN/1561259314844.png" alt="1561259314844"></p>
 <h3 id="消融实验"><a href="#消融实验" class="headerlink" title="消融实验"></a>消融实验</h3><ol>
 <li>R-FCN</li>
 </ol>
 <ul>
 <li>更少的特征层的影响</li>
 </ul>
-<p><img src="//yoursite.com/2019/06/23/0622_Light-Head-RCNN/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561258603579.png" alt="1561258603579"></p>
+<p><img src="/2019/06/23/0622_Light-Head-RCNN/1561258603579.png" alt="1561258603579"></p>
 <p>​        可以看出使用更少的通道数会造成精度的下降，但下降是微小的。</p>
 <ul>
 <li>大的可分离卷积</li>
 </ul>
-<p><img src="//yoursite.com/2019/06/23/0622_Light-Head-RCNN/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561258710591.png" alt="1561258710591"></p>
+<p><img src="/2019/06/23/0622_Light-Head-RCNN/1561258710591.png" alt="1561258710591"></p>
 <p>​        使用大的卷积核能够在一定程度上提升精度。</p>
 <ul>
 <li>总体比较</li>
 </ul>
-<p><img src="//yoursite.com/2019/06/23/0622_Light-Head-RCNN/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561259414694.png" alt="1561259414694"></p>
+<p><img src="/2019/06/23/0622_Light-Head-RCNN/1561259414694.png" alt="1561259414694"></p>
 <h2 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h2><p>​        本文从分析二阶段检测方法的弊端出发，发现影响速度的关键在于头部网络，因此设法对其简化。而简化时候所用的方法也都是深度学习领域的常见方法（减少通道数、减少网络层数），同时为了在不引入太多计算的情况下提升精度，作者加入的大卷积核的可分离卷积来提升感受野，整合信息。</p>
 <p>​        很喜欢目标检测方面的文章，可以发现这类文章的intuition都很明确，执行起来又都不复杂，例如本文，例如GIoU，Mask Scoring RCNN等。</p>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1] <a href="https://arxiv.org/abs/1711.07264" target="_blank" rel="noopener">Light-Head R-CNN: In Defense of Two-Stage Object Detector</a></p>
