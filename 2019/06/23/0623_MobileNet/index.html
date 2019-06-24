@@ -15,19 +15,24 @@
   </script>
 
   
-  <title>归档: 2019 | encounter1997</title>
+  <title>MobileNet | encounter1997</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A Cver at USTC">
-<meta name="keywords" content="CV, USTC">
-<meta property="og:type" content="website">
-<meta property="og:title" content="encounter1997">
-<meta property="og:url" content="http://yoursite.com/archives/2019/index.html">
+  <meta name="description" content="概述​        随着深度学习的发展，尽管各种网络的精度逐渐上升，但实际上他们的运算量还是很大（效率较低），无法应用在手机，无人机等资源相对紧缺的环境中。本文使用深度可分离卷积，提出一种可以在维持精度进本不变的情况下，大幅减少参数量和运算量的方法。 方法深度可分离卷积深度可分卷积将普通卷积分解为以下两步： Depthwise Convolution  ​        在Depthwise C">
+<meta name="keywords" content="paper,architecture">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MobileNet">
+<meta property="og:url" content="http://yoursite.com/2019/06/23/0623_MobileNet/index.html">
 <meta property="og:site_name" content="encounter1997">
-<meta property="og:description" content="A Cver at USTC">
+<meta property="og:description" content="概述​        随着深度学习的发展，尽管各种网络的精度逐渐上升，但实际上他们的运算量还是很大（效率较低），无法应用在手机，无人机等资源相对紧缺的环境中。本文使用深度可分离卷积，提出一种可以在维持精度进本不变的情况下，大幅减少参数量和运算量的方法。 方法深度可分离卷积深度可分卷积将普通卷积分解为以下两步： Depthwise Convolution  ​        在Depthwise C">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://yoursite.com/2019/06/23/0623_MobileNet/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561261056049.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/23/0623_MobileNet/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561261743063.png">
+<meta property="og:image" content="http://yoursite.com/2019/06/23/0623_MobileNet/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561262290098.png">
+<meta property="og:updated_time" content="2019-06-23T13:14:29.526Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="encounter1997">
-<meta name="twitter:description" content="A Cver at USTC">
+<meta name="twitter:title" content="MobileNet">
+<meta name="twitter:description" content="概述​        随着深度学习的发展，尽管各种网络的精度逐渐上升，但实际上他们的运算量还是很大（效率较低），无法应用在手机，无人机等资源相对紧缺的环境中。本文使用深度可分离卷积，提出一种可以在维持精度进本不变的情况下，大幅减少参数量和运算量的方法。 方法深度可分离卷积深度可分卷积将普通卷积分解为以下两步： Depthwise Convolution  ​        在Depthwise C">
+<meta name="twitter:image" content="http://yoursite.com/2019/06/23/0623_MobileNet/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561261056049.png">
   
     <link rel="alternate" href="/atom.xml" title="encounter1997" type="application/atom+xml">
   
@@ -113,478 +118,145 @@
 
   <div id="main-wrap" class="position-relative" style="margin-top: 55px;">
       <div class="main-inner-content">
-          <style>
-    .post-hover:hover {
-        box-shadow: inset 0 0 100px #000;
-        transition: box-shadow .2s;
-    }
+          <!--博文页面-->
 
-    .sub-post-container .post-hover:hover h3 {
-        text-decoration: underline gray;
-    }
-
-
-    .primary-item-main {
-        height: 330px;
+<style>
+    .header-box {
+        height: 370px;
+        filter: blur(10px);
         background-size: cover;
+        background-color: lightsteelblue;
     }
 
-    .primary-container .title,
-    .primary-container .sub-title,
-    .primary-container .post-content-text,
-    .primary-container .date {
-        color: #fff;
+    .post-box {
+        padding: 15px;
+        padding-top: 60px;
+        min-height: 80vh;
+        margin-top: -200px;
+        border-radius: 4px;
+        background-color: rgba(255,255,255,.8);
     }
 
-    .post-content-text {
-        color: #f1f1f1!important;
+    .post-avatar {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
     }
 
-    .primary-container .post-hover {
-        background: black;
+    .flow-chart {
+        text-align: center;
     }
 
-    .content-bg-mask {
-        background: rgba(0,0,0,.4);
+    img[alt="post-cover"] {
+        display: none;
     }
-
 </style>
-
-<div style="background: #f5f8f9;">
-    <div id="main-container" class="container" style="padding-top: 20px;">
-        <div class="is-flex main-content justify-center">
-            <section class="column is-9">
-                
-<div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
-    <div class="column  is-7-desktop">
-        <a href="/2019/06/24/0624_Residual Attention Network for Image Classification/">
-            <div class="full-height post-hover"
-                 style="
-                         background-image: url('');
-                         height: 350px;
-                         background-size: cover;
-                         background-repeat: no-repeat;
-                         ">
-                    <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
-                        <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            Residual Attention Network for Image Classificat..
-                        </h1>
-                        <div>
-                        
-                            `
-                                <span class="tag is-post-tag">paper</span>
-                            `
-                                <span class="tag is-post-tag">architecture</span>
-                            `
-                                <span class="tag is-post-tag">attention</span>
-                            `
-                                <span class="tag is-post-tag">classification</span>
-                            
-                        
-                        </div>
-                        <p class="post-content-text is-marginless has-padding text-shadow">
-                            概述模型
-参考文献
-                        </p>
-                        <p class="date text-shadow">2019-06-24</p>
-                        <button class="button is-info is-small">Read More</button>
-                    </div>
+<header>
+    <div id="header_box" class="header-box"></div>
+</header>
+<section>
+    <div class="container post-box">
+        <div class="content post-title is-flex center flex-column" style="margin-bottom: 70px; overflow: auto;">
+            <h1 class="has-text-centered" style="padding-bottom: 10px; border-bottom: 3px solid #fff">
+                <strong>MobileNet</strong>
+            </h1>
+            
+            <div class="is-flex align-center">
+                <img class="post-avatar" src="http://tvax3.sinaimg.cn/crop.0.0.828.828.1024/006dsxxRly8g3170zolnnj30n00n0wfs.jpg">
+                <span style="padding:0 10px;"> <span class="sub-title">By</span> WWen</span>
+                <span class="post-date sub-title">at: 2019-06-23</span>
             </div>
-        </a>
-    </div>
-    <div class="column is-5 is-hidden-touch" style="padding-left: 0;">
-        <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
-                
-<a class="post-hover" href="/2019/06/24/模板/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                Null
-            </h3>
-            
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-            </p>
-            <p class="date text-shadow is-marginless">2019-06-24</p>
-        </div>
-    </div>
-</a>
-            
-            
-                
-<a class="post-hover" href="/2019/06/23/0622_CornerNet/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                CornetNet
-            </h3>
-            
-            
-            <span class="tag is-post-tag">detection</span>
-            
-            <span class="tag is-post-tag">paper</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-            </p>
-            <p class="date text-shadow is-marginless">2019-06-23</p>
-        </div>
-    </div>
-</a>
+                <div>
+                    
+                         <a class="tag is-post-tag" href="/tags/paper/">paper</a>
+                    
+                         <a class="tag is-post-tag" href="/tags/architecture/">architecture</a>
+                    
+                </div>
             
         </div>
-    </div>
-    <div class="column is-12 is-hidden-desktop">
-        
-        
-<a class="post-hover" href="/2019/06/24/模板/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                Null
-            </h3>
-            
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-            </p>
-            <p class="date text-shadow is-marginless">2019-06-24</p>
+        <div class="content" style="overflow: auto">
+            <h2 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h2><p>​        随着深度学习的发展，尽管各种网络的精度逐渐上升，但实际上他们的运算量还是很大（效率较低），无法应用在手机，无人机等资源相对紧缺的环境中。本文使用深度可分离卷积，提出一种可以在维持精度进本不变的情况下，大幅减少参数量和运算量的方法。</p>
+<h2 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h2><h3 id="深度可分离卷积"><a href="#深度可分离卷积" class="headerlink" title="深度可分离卷积"></a>深度可分离卷积</h3><h4 id="深度可分卷积将普通卷积分解为以下两步："><a href="#深度可分卷积将普通卷积分解为以下两步：" class="headerlink" title="深度可分卷积将普通卷积分解为以下两步："></a>深度可分卷积将普通卷积分解为以下两步：</h4><ul>
+<li>Depthwise Convolution</li>
+</ul>
+<p>​        在Depthwise Convolution中，对输入的M个channel的特征图，仅采用M个单通道的卷积核（大小相当于一个普通卷积核）。与普通卷积不同的是，此卷积在完成对每个通道的计算后不做加和。而把信息整合的任务交给下一步完成。</p>
+<ul>
+<li>Pointwise Convolution</li>
+</ul>
+<p>​        该部分网络对Depthwise Convolution输出的M个channel的信息做线性组合。使用的是普通1x1卷积核。</p>
+<p><img src="//yoursite.com/2019/06/23/0623_MobileNet/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561261056049.png" alt="1561261056049"></p>
+<h4 id="深度可分离卷积与普通卷积的比较"><a href="#深度可分离卷积与普通卷积的比较" class="headerlink" title="深度可分离卷积与普通卷积的比较"></a>深度可分离卷积与普通卷积的比较</h4><p><img src="//yoursite.com/2019/06/23/0623_MobileNet/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561261743063.png" alt="1561261743063"></p>
+<p>​        对于深度可分离卷积，需要在Depthwise Convolution和Pointwise Convolution后面分别加入BN与ReLU。</p>
+<h4 id="深度可分离卷积的运算量"><a href="#深度可分离卷积的运算量" class="headerlink" title="深度可分离卷积的运算量"></a>深度可分离卷积的运算量</h4><ul>
+<li><p>普通卷积的运算量为</p>
+<p>  D<sub>K</sub> * D<sub>K</sub> * M * N * D<sub>F</sub> * D<sub>F</sub></p>
+</li>
+<li><p>深度可分离卷积中</p>
+<ul>
+<li><p>Depthwise Conv的运算量为</p>
+<p>  D<sub>K</sub> * D<sub>K</sub> * M * D<sub>F</sub> * D<sub>F</sub></p>
+</li>
+<li><p>Pointwise Conv的运算量为</p>
+<p>  M * N * D<sub>F</sub> * D<sub>F</sub></p>
+</li>
+<li><p>总的运算量与普通卷积运算量的比值为</p>
+<p><img src="//yoursite.com/2019/06/23/0623_MobileNet/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561262290098.png" alt="1561262290098"></p>
+<p>​    可见，深度可分离卷积能够在很大程度上减少运算量。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="减少运算量的两个参数"><a href="#减少运算量的两个参数" class="headerlink" title="减少运算量的两个参数"></a>减少运算量的两个参数</h3><h4 id="Width-Multiplier"><a href="#Width-Multiplier" class="headerlink" title="Width Multiplier"></a>Width Multiplier</h4><p>​        按比例将网络中特征的通道数整体减少，可以将运算量降低为原来的平方分之一。</p>
+<h4 id="Resolution-Multiplier"><a href="#Resolution-Multiplier" class="headerlink" title="Resolution Multiplier"></a>Resolution Multiplier</h4><p>​        按比例将输入图片的尺度减小，可以将运算量降低为原来的平方分之一。</p>
+<h2 id="实验"><a href="#实验" class="headerlink" title="实验"></a>实验</h2><h2 id="收获"><a href="#收获" class="headerlink" title="收获"></a>收获</h2><h4 id="紧抓最新进展"><a href="#紧抓最新进展" class="headerlink" title="紧抓最新进展"></a>紧抓最新进展</h4><p>​        本文在Inception等与深度可分离卷积相关的工作出现后很快便完成，说明要紧抓学术动向与最新进展，学会站在巨人的肩膀上。</p>
+<h4 id="要从本质上理解问题"><a href="#要从本质上理解问题" class="headerlink" title="要从本质上理解问题"></a>要从本质上理解问题</h4><p>​        将普通卷积理解为信息处理（对应位置点乘）与融合（各个channel对应位置相加）两部分，就能够很自然地产生深度可分离卷积这一想法。</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p>[1] <a href="https://arxiv.org/abs/1704.04861" target="_blank" rel="noopener">MobileNets: Efficient Convolutional Neural Networks for Mobile Vision Applications</a></p>
+<p>[2] <a href="https://blog.csdn.net/u014380165/article/details/72938047" target="_blank" rel="noopener">MobileNets—深度学习模型的加速</a></p>
+
         </div>
-    </div>
-</a>
-        
-        
-        
-<a class="post-hover" href="/2019/06/23/0622_CornerNet/" style="height: 48.5%">
-    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
-        <div class="content-bg-mask full-width full-height has-padding">
-            <h3 class="title is-marginless text-shadow">
-                CornetNet
-            </h3>
+        <div class="post-reply">
             
+                <!-- 来必力City版安装代码 -->
+                <div id="lv-container" data-id="city" data-uid="MTAyMC8yOTE4Ni81NzUz">
+                    <script type="text/javascript">
+                        (function(d, s) {
+                            var j, e = d.getElementsByTagName(s)[0];
+
+                            if (typeof LivereTower === 'function') { return; }
+
+                            j = d.createElement(s);
+                            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                            j.async = true;
+
+                            e.parentNode.insertBefore(j, e);
+                        })(document, 'script');
+                    </script>
+                    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+                </div>
+                <!-- City版安装代码已完成 -->
             
-            <span class="tag is-post-tag">detection</span>
-            
-            <span class="tag is-post-tag">paper</span>
-            
-            
-            <p class="sub-title text-shadow"></p>
-            <p class="is-marginless text-shadow post-content-text">
-                
-            </p>
-            <p class="date text-shadow is-marginless">2019-06-23</p>
-        </div>
-    </div>
-</a>
-        
-    </div>
-</div>
-
-                    
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/06/24/模板/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Null</h3>
-                                        
-                                        <p>
-                                            
-                                        </p>
-                                        <p>
-                                            
-                                        </p>
-                                        <p>2019-06-24</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/06/23/0622_CornerNet/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>CornetNet</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">detection</span>
-                                            
-                                                <span class="tag is-post-tag">paper</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-                                        </p>
-                                        <p>2019-06-23</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/06/23/0622_SENet/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('//yoursite.com/2019/06/23/0622_SENet/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561294975850.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>SENet</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">paper</span>
-                                            
-                                                <span class="tag is-post-tag">architecture</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-
-
-模型复杂度和运算复杂度分析​        从计算量（FLOPs）、时间、参数量（million）三个角度进行分析。
-计算量时间参数量参考文献[1]  Squeeze-and-Excitation Networks
-
-                                        </p>
-                                        <p>2019-06-23</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/06/23/to-read/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Null</h3>
-                                        
-                                        <p>
-                                            
-                                        </p>
-                                        <p>
-                                            
-attention
-focal loss
-grouped convolutions (ResNeXt)
-ShuffleNet
-Xception
-熟练faster rcnn与yolo
-grad-cam可视化（在NTS-Net上尝试）
-如何计算网络的参数量和计算复杂度
-soft attention
-attention combined with distr..
-                                        </p>
-                                        <p>2019-06-23</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/06/23/0623_MobileNet/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('//yoursite.com/2019/06/23/0623_MobileNet/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561261056049.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>MobileNet</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">paper</span>
-                                            
-                                                <span class="tag is-post-tag">architecture</span>
-                                            
-                                        </p>
-                                        <p>
-                                            概述​        随着深度学习的发展，尽管各种网络的精度逐渐上升，但实际上他们的运算量还是很大（效率较低），无法应用在手机，无人机等资源相对紧缺的环境中。本文使用深度可分离卷积，提出一种可以在维持精度进本不变的情况下，大幅减少参数量和运算量的方法。
-方法深度可分离卷积深度可分卷积将普通卷积分解为以下两步：
-Depthwise Convolution
-..
-                                        </p>
-                                        <p>2019-06-23</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/06/23/0623_SENet/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('//yoursite.com/2019/06/23/0623_SENet/C:%5CUsers%5Cwangwen%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5C1561294975850.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>SENet</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">paper</span>
-                                            
-                                                <span class="tag is-post-tag">architecture</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-参考文献[1]  Squeeze-and-Excitation Networks
-
-                                        </p>
-                                        <p>2019-06-23</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/06/23/0623_CornerNet/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>CornetNet</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">detection</span>
-                                            
-                                                <span class="tag is-post-tag">paper</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-                                        </p>
-                                        <p>2019-06-23</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/06/23/0622_Light-Head-RCNN/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                    <div class="column is-4-desktop is-5-tablet post-avatar is-hidden-mobile"
-                                         style="margin: 10px; background-size: cover;background-image: url('/2019/06/23/0622_Light-Head-RCNN/1561215773857.png')">
-                                    </div>
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Light-Head R-CNN</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">detection</span>
-                                            
-                                                <span class="tag is-post-tag">paper</span>
-                                            
-                                        </p>
-                                        <p>
-                                            概述​        本文指出目标检测中二阶段方法（例如Faster RCNN与R-FCN）速度慢的主要原因在于其头部（用于对proposal进行分类的部分）网络的运算量较大。为此，本文提出了两点改进：
-
-减少用于分类的特征的通道数
-降低头部网络的复杂度（仅使用一个全连接层）
-
-​        最终，本文的方法能够在大幅提高速度的同时，在一定程度上提高..
-                                        </p>
-                                        <p>2019-06-23</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                    
-                        <div class="content-box  " style="margin-bottom: 27px;">
-                            <a class="post-hover" href="/2019/06/21/faster_rcnn/">
-                            <div class="columns" style="min-height: 230px;">
-                                
-                                <div class="column is-8-desktop post-content is-flex align-center">
-                                    <div class="content">
-                                        <h3>Fater R-CNN 实现</h3>
-                                        
-                                        <p>
-                                            
-                                                <span class="tag is-post-tag">detection</span>
-                                            
-                                                <span class="tag is-post-tag">coding</span>
-                                            
-                                        </p>
-                                        <p>
-                                            
-                                        </p>
-                                        <p>2019-06-21</p>
-                                        <button class="button is-small">Read More</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                        </div>
-                    
-                
-                <!--翻頁-->
-                <nav class="pagination is-flex" style="justify-content: flex-end">
-                    
-                </nav>
-            </section>
             
         </div>
     </div>
-</div>
+</section>
+<script>
+    // 获取第一张图, 用以当封面背景图
+    var img = document.querySelectorAll('img')[1]
+
+    if (img) {
+        var header_box = document.querySelector('#header_box')
+        header_box.style.backgroundImage = 'url('+ img.src +')'
+    }
+</script>
+
+<!-- for code block highlight --> 
+<!-- theme.block_highlight -->
+<!-- we do not guarantee the char sequences spell right, usr himself do it -->
+<link rel="stylesheet" href="/css/highlight_rainbow.css">
+<script src="/js/highlight.min.js"></script>
+<script type="text/javascript"> hljs.initHighlightingOnLoad();</script>
 
       </div>
   </div>
